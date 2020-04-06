@@ -8,8 +8,8 @@ import * as math from 'mathjs';
 class App extends Component {
   constructor(props){
     super(props);
-
     this.state = {
+      display: "0",
       input: ""
     };
   }
@@ -32,65 +32,67 @@ class App extends Component {
         <div className="calc-wrapper">
           <Input input={this.state.input}></Input>
           <div className="row">
-            <Button id="seven" handleClick={this.addToInput}>
+            <Button id="seven" value="7" handleClick={this.addToInput}>
               7
             </Button>
-            <Button id="eight" handleClick={this.addToInput}>
+            <Button id="eight" value="8" handleClick={this.addToInput}>
               8
             </Button>
-            <Button id="nine" handleClick={this.addToInput}>
+            <Button id="nine" value="9" handleClick={this.addToInput}>
               9
             </Button>
-            <Button id="divide" handleClick={this.addToInput}>
+            <Button id="divide" value="/" handleClick={this.addToInput}>
               /
             </Button>
           </div>
           <div className="row">
-            <Button id="four" handleClick={this.addToInput}>
+            <Button id="four" value="4" handleClick={this.addToInput}>
               4
             </Button>
-            <Button id="five" handleClick={this.addToInput}>
+            <Button id="five" value="5" handleClick={this.addToInput}>
               5
             </Button>
-            <Button id="six" handleClick={this.addToInput}>
+            <Button id="six" value="6" handleClick={this.addToInput}>
               6
             </Button>
-            <Button id="multiply" handleClick={this.addToInput}>
+            <Button id="multiply" value="*" handleClick={this.addToInput}>
               *
             </Button>
           </div>
           <div className="row">
-            <Button id="one" handleClick={this.addToInput}>
+            <Button id="one" value="1" handleClick={this.addToInput}>
               1
             </Button>
-            <Button id="two" handleClick={this.addToInput}>
+            <Button id="two" value="2" handleClick={this.addToInput}>
               2
             </Button>
-            <Button handleClick={this.addToInput} id="three">
+            <Button id="three" value="3" handleClick={this.addToInput}>
               3
             </Button>
-            <Button id="add" handleClick={this.addToInput}>
+            <Button id="add" value="+" handleClick={this.addToInput}>
               +
             </Button>
           </div>
           <div className="row">
-            <Button id="decimal" handleClick={this.addToInput}>
+            <Button id="decimal" value="." handleClick={this.addToInput}>
               .
             </Button>
-            <Button id="zero" handleClick={this.addToInput}>
+            <Button id="zero" value="0" handleClick={this.addToInput}>
               0
             </Button>
-            <Button id="equals" handleClick={() => this.handleEqual()}>
+            <Button
+              id="equals"
+              value="="
+              handleClick={() => this.handleEqual()}
+            >
               =
             </Button>
-            <Button id="subtract" handleClick={this.addToInput}>
+            <Button id="subtract" value="-" handleClick={this.addToInput}>
               -
             </Button>
           </div>
           <div className="row">
-            <ClearButton
-              handleClear={() => this.setState({ input: "" })}
-            >
+            <ClearButton handleClear={() => this.setState({ input: "" })}>
               Clear
             </ClearButton>
           </div>

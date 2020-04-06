@@ -89,7 +89,6 @@ class App extends Component {
           </div>
           <div className="row">
             <ClearButton
-              id="clear"
               handleClear={() => this.setState({ input: "" })}
             >
               Clear

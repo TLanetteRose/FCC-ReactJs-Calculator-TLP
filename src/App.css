@@ -1,14 +1,21 @@
 .app {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
   width: 100%;
 }
 
+.calculator-title {
+  margin-bottom: 40px;
+  padding: 0px 40px;
+}
+
 .calc-wrapper {
   width: 400px;
   height: 600px;
+  margin-bottom: 50px;
 }
 
 .row {

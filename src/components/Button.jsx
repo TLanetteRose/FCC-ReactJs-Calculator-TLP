@@ -6,12 +6,12 @@ const isOperator = val => {
     return !isNaN(val) || val === "." || val === "=";
     // Detects if it is a number or not
 }
-const Button = props => (
+export const Button = props => (
     <div className={`button-wrapper ${
         isOperator(props.children) ? null : "operator"
-    }`}>
+    }`}
+    onClick={() => props.handleClick(props.children)}>
         {props.children}
     </div>
-)
+);
 
-export default Button;

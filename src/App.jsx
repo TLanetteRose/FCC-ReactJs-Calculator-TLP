@@ -8,8 +8,8 @@ import * as math from 'mathjs';
 class App extends Component {
   constructor(props){
     super(props);
-
     this.state = {
+      display: "0",
       input: ""
     };
   }
@@ -30,9 +30,9 @@ class App extends Component {
       <div className="app">
         <h1 className="calculator-title">ReactJS Calculator App</h1>
         <div className="calc-wrapper">
-          <Input input={this.state.input}></Input>
+         <Input input={this.state.input}></Input>
           <div className="row">
-            <Button id="seven" handleClick={this.addToInput}>
+            <Button id="seven" value="7" display="7" handleClick={this.addToInput}>
               7
             </Button>
             <Button id="eight" handleClick={this.addToInput}>

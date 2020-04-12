@@ -2,7 +2,7 @@ import React from 'react';
 import './ClearButton.css';
 
 export const ClearButton = (props) => (
-         <div id="clear" className="clear-btn" onClick={props.handleClear}>
+         <div id={props.id} className="clear-btn" onClick={props.clearDisplay}>
            {props.children}
          </div>
        );
